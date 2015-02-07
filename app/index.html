@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>Sergio Morcuende - FrontEnd Web Engineer</title>
+    <meta name="author" content="Sergio Morcuende - @smorcuend">
+    <meta name="description" content="Sergio Morcuende's personal portfolio">
+    <meta name="keywords" content="smorcuend, Sergio Morcuende, Audiovisual Systems Enginner, Ingeniero de sistemas audiovisuales, Desarrollador de software,Software Developer,Geek,Github,Web developer,Desarrollo Web,HTML5,CSS3,Javascript,Front-end web">
+    <meta name="viewport" content="width=device-width">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="portfolioApp" ng-controller="MainCtrl">
+    <!--[if lte IE 9]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main-toolbar layout="row" class="container__toolbar"></main-toolbar>
+    <main-content layout="column" class="container__content" tabindex="-1" role="main"></main-content>
+    <main-footer layout="column" layout-align="center center" class="container__footer" flex></main-footer>
+
+    <div ng-hide="true" ng-include="'images/sprite.svg'"></div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/svg4everybody/svg4everybody.min.js"></script>
+    <script src="bower_components/svg4everybody/svg4everybody.ie8.min.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/skills.js"></script>
+    <script src="scripts/directives/main-toolbar.js"></script>
+    <script src="scripts/directives/main-content.js"></script>
+    <script src="scripts/directives/main-footer.js"></script>
+    <script src="scripts/directives/md-icon-svg.js"></script>
+    <script src="scripts/directives/github-info.js"></script>
+    <script src="scripts/directives/social-bar.js"></script>
+    <script src="scripts/directives/circle-popover.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

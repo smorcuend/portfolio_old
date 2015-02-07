@@ -1,0 +1,18 @@
+<md-toolbar ng-class="{visible:!isOnTop}" md-scroll-shrink="true" md-shrink-speed-factor="0.8" layout-gt-sm="row" layout-sm="column" class="toolbar">
+
+    <div class="md-toolbar-tools">
+
+        <md-button ng-click="toggleSideNav()" flex-gt-md="5" flex-md="10" flex-sm="20" show-sm aria-label="nav" class="nav" >
+            <md-icon-svg icon-sprite="#nav" class="md-icon__container"></md-icon-svg>
+        </md-button>
+
+        <h3 flex class="home">
+            <span class="home__title alias">{{coverContent.title}}</span>
+            <span hide-md hide-sm class="home__slogan">{{coverContent.slogan}}</span>
+        </h3>
+
+        <social-bar flex-gt-sm="35" hide-sm class="socialicons" layout="row" layout-align="end center"></social-bar>
+
+    </div>
+
+</md-toolbar>

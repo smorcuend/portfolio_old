@@ -1,0 +1,152 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+    <md-content class="md-padding sidenav__content">
+        <ul class="sidenav__content__list">
+            <li ng-repeat="it in asidemenu">
+                <a ng-href="{{ it.href }}" ng-click="scrollNavigate($event)" du-scrollspy  offset="{{it.offset}}">{{it.title}}</a>
+            </li>
+        </ul>
+    </md-content>
+</md-sidenav>
+
+<md-content layout="column" layout-align="center center" class="content" id="container" >
+
+    <md-content id="cover" layout="column" layout-fill layout-align="center center" class="cover">
+        <div class="overlay" ng-class="{visible:isOnTop}">
+            <p class="cover__more">...scroll down to learn more</p>
+        </div>
+        <div class="cover__content" ng-class="{visible:isOnTop}">
+            <h2 class="cover__title alias">{{coverContent.title}}</h2>
+            <h3 class="cover__slogan">{{coverContent.slogan}}</h3>
+
+            <social-bar class="socialicons" layout="row" layout-align="center center"></social-bar>
+
+        </div>
+    </md-content>
+
+
+    <md-content id="description" layout="column" class="content__box description md-dark-theme">
+
+        <h2 layout="row" class="description__title title centered">This is my personal site and my design playground</h2>
+
+        <div layout="row" layout-sm="column" layout-align="center start" layout-margin layout-padding class="description__content">
+
+            <div flex-gt-sm="40" flex>
+                <p class="description">Hi!. I'm a Spanish boy born in the land of Don Quixote of La Mancha. I'm passionate about that science and technology let us live in a best global society. Nowadays, Internet and the web technologies are my work chain.</p>
+
+                <p class="description">I discover my love by Web technologies around the year 2011. In this moment, i realize the potencial as a tool for change.</p>
+            </div>
+
+            <div flex-gt-sm="40" flex>
+
+                <p class="description">Currently, I am Front-end Web Engineer at <a class="marked" href="https://bq.com" target="_blank">bq</a>. It's in this great company where i am trying to explore the capabilities of future web with my beloved team.</p>
+
+                <p class="description">I try to translate some personal attributes that define me, such as, creativity, optimism, enthusiasm, into projects that i work.</p>
+
+            </div>
+
+        </div>
+
+    </md-content>
+
+
+    <md-content id="skills" ng-controller="SkillsCtrl" layout-fill layout="column" layout-align="center start" class="content__box skills md-light-theme" >
+
+        <h2 class="skills__title title centered">I'm working with...</h2>
+
+        <div layout="row" layout-align="center center" circle-popover class="circle-popover md-dark-theme" circle-popover-title="...Front-End JavaScript Techs." circle-popover-icon="#html5" circle-popover-data="data/front.json"></div>
+
+        <div layout="row" layout-align="center center" circle-popover class="circle-popover" circle-popover-title="...Back-End JavaScript Techs. & DevTools" circle-popover-icon="#nodejs"></div>
+
+        <div layout="row" layout-align="center center" circle-popover class="circle-popover" circle-popover-title="...other Technologies occasionally" circle-popover-icon="#"></div>
+
+        <!-- <h3 class="skills__subtitle subtitle">...Front-End JavaScript Technologies</h3> -->
+
+        <!--<div layout="column" class="skills__container">
+
+            <div ng-repeat="(skill_key,skills_group) in skills.front" layout-sm="column" layout-gt-sm="row" layout-align="center center" class="skills__content {{skill_key}}" >
+
+                <div ng-repeat="skill in skills_group" flex-sm="60" flex-gt-sm="{{ 100 / skills_group.length }}" class="md-icon__container" title="{{skill.name}}">
+
+                    <svg ng-if="skill.svg" class="md-icon" role="img" title="{{skill.name}}">
+                        <use xlink:href="{{ '#' + skill.icon }}"/>
+                    </svg>
+                    <img ng-if="!skill.svg" ng-src="{{'images/tools_icons/' + skill.icon +'.png'}}" class="md-icon" alt="{{skill.name}}" />
+
+                </div>
+
+            </div>
+
+        </div> -->
+
+<!--         <h3 class="skills__subtitle subtitle">...Back-End JavaScript Technologies & DevTools</h3> -->
+
+<!--         <div layout="column" class="skills__container">
+
+            <div ng-repeat="(skill_key,skills_group) in skills.back" layout-sm="column" layout-gt-sm="row" layout-align="center center" class="skills__content" >
+
+                <div ng-repeat="skill in skills_group" flex-sm="60" flex-gt-sm="{{ 100 / skills_group.length }}" class="md-icon__container" title="{{ skill.name }}">
+
+                    <md-icon-svg ng-if="skill.svg" icon-sprite="{{ '#' + skill.icon }}" class="md-icon__container" title="{{ skill.name }}"></md-icon-svg>
+                    <img ng-if="!skill.svg" ng-src="{{ 'images/tools_icons/' + skill.icon +'.png'}}" class="md-icon" alt="{{ skill.name }}" />
+
+                </div>
+            </div>
+        </div>
+        -->
+<!--
+        <h3 class="skills__subtitle subtitle">...other Technologies occasionally</h3>
+
+        <div layout="column" class="skills__container">
+
+            <div ng-repeat="(skill_key,skills_group) in skills.others" layout-sm="column" layout-gt-sm="row" layout-align="center center" class="skills__content" >
+
+                <div ng-repeat="skill in skills_group" flex-sm="60" flex-gt-sm="{{ 100 / skills_group.length }}" class="md-icon__container" title="{{ skill.name }}">
+
+                    <md-icon-svg ng-if="skill.svg" icon-sprite="{{ '#' + skill.icon }}" class="md-icon__container" title="{{ skill.name }}"></md-icon-svg>
+                    <img ng-if="!skill.svg" ng-src="{{ 'images/tools_icons/' + skill.icon +'.png'}}" class="md-icon" alt="{{ skill.name }}" />
+
+                </div>
+            </div>
+
+        </div> -->
+
+    </md-content>
+
+
+    <md-content id="projects" layout-fill layout="column" layout-align="center center " class="content__box skills md-dark-theme" >
+
+        <h2 class="projects__title title centered">I'm working on...</h2>
+
+
+        <div layout-sm="column" layout-gt-sm="row" class="projects__content" >
+
+            <div layout="column" flex-sm flex-gt-sm="50" layout-fill layout-align="start center">
+
+                <h3 class="projects__title subtitle centered">...personal projects</h3>
+
+                <github-info id="personal_repositories" user="smorcuend" type="repositories" show-fork="false"></github-info>
+
+            </div>
+
+            <div layout="column" flex-sm flex-gt-sm="50" layout-fill layout-align="start center">
+
+                <h3 class="projects__title subtitle centered">...open-source projects</h3>
+
+                <github-info id="contribution_repositories" user="bq" type="repositories" language="JavaScript" show-fork="false"></github-info>
+
+            </div>
+
+        </div>
+
+    </md-content>
+
+    <!--<md-content id="activity" layout="column" layout-fill class="content__box activity md-light-theme" >
+        <p flex>Twitter Activity</p>
+        <p flex>Github Activity</p>
+    </md-content>
+
+    <md-content id="cites" layout="column" layout-fill class="content__box activity md-dark-theme">
+        <blockquote cite="http://en.wikipedia.org/wiki/Alan_Kay#cite_note-2">"The best way to predict the future is to invent it." Alan kay</blockquote>
+    </md-content> -->
+
+</md-content>

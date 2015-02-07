@@ -1,0 +1,53 @@
+[{
+    "name": "Backbone",
+    "svg": true,
+    "icon": "backbone"
+}, {
+    "name": "Marionette",
+    "svg": true,
+    "icon": "marionette"
+}, {
+    "name": "AngularJS",
+    "svg": true,
+    "icon": "angularjs"
+}, {
+    "name": "HydraJS",
+    "svg": false,
+    "icon": "hydrajs"
+}, {
+    "name": "coreJS",
+    "svg": false,
+    "icon": "corejs"
+}, {
+    "name": "kiUI",
+    "svg": true,
+    "icon": "kiui"
+}, {
+    "name": "RequireJS",
+    "svg": false,
+    "icon": "requirejs"
+}, {
+    "name": "Web Components",
+    "svg": false,
+    "icon": "webcomponents"
+}, {
+    "name": "Polymer project",
+    "svg": true,
+    "icon": "polymer"
+}, {
+    "name": "jQuery",
+    "svg": true,
+    "icon": "jquery"
+}, {
+    "name": "SVG",
+    "svg": true,
+    "icon": "svg"
+}, {
+    "name": "Bootstrap",
+    "svg": false,
+    "icon": "bootstrap"
+}, {
+    "name": "Less",
+    "svg": false,
+    "icon": "less"
+}]
