@@ -8,17 +8,18 @@
  *
  * Main module of the application.
  */
-(function () {
+(function() {
 
-	angular.module('portfolioApp', [
-		'ngAnimate',
-		'ngResource',
-		'ngRoute',
-		'ngSanitize',
-		'ngTouch',
-		'ngMaterial',
-		'ngStorage',
-		'duScroll'
-	]);
+    angular.module('portfolioApp', [
+        'ngAnimate',
+        'ngResource',
+        'ngRoute',
+        'ngSanitize',
+        'ngTouch',
+        'ngMaterial',
+        'ngStorage',
+        'duScroll',
+        'angular-google-analytics'
+    ]);
 
 })();

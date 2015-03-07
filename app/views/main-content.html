@@ -2,7 +2,7 @@
     <md-content class="md-padding sidenav__content">
         <ul class="sidenav__content__list">
             <li ng-repeat="it in asidemenu">
-                <a ng-href="{{ it.href }}" ng-click="scrollNavigate($event)" du-scrollspy  offset="{{it.offset}}">{{it.title}}</a>
+                <a ng-href="{{ it.href }}" ng-click="scrollNavigate($event)" du-scrollspy offset="{{it.offset}}" class="link">{{it.title}}</a>
             </li>
         </ul>
     </md-content>
@@ -38,7 +38,7 @@
 
             <div flex-gt-sm="40" flex>
 
-                <p class="description">Currently, I am Front-end Web Engineer at <a class="marked" href="https://bq.com" target="_blank">bq</a>. It's in this great company where i am trying to explore the capabilities of future web with my beloved team.</p>
+                <p class="description">Currently, I am Front-end Web Engineer at <a class="marked link" href="https://bq.com" target="_blank">bq</a>. It's in this great company where i am trying to explore the capabilities of future web with my beloved team.</p>
 
                 <p class="description">I try to translate some personal attributes that define me, such as, creativity, optimism, enthusiasm, into projects that i work.</p>
 
@@ -49,71 +49,20 @@
     </md-content>
 
 
-    <md-content id="skills" ng-controller="SkillsCtrl" layout-fill layout="column" layout-align="center start" class="content__box skills md-light-theme" >
+    <md-content id="skills" layout-fill layout="column" layout-align="center center" class="content__box skills md-light-theme">
 
         <h2 class="skills__title title centered">I'm working with...</h2>
 
-        <div layout="row" layout-align="center center" circle-popover class="circle-popover md-dark-theme" circle-popover-title="...Front-End JavaScript Techs." circle-popover-icon="#html5" circle-popover-data="data/front.json"></div>
+        <div layout="column" layout-align="center center" circle-popover class="circle-popover md-dark-theme" circle-popover-title="...Front-End JavaScript Techs." circle-popover-icon="html5" circle-popover-data="data/front.json"></div>
 
-        <div layout="row" layout-align="center center" circle-popover class="circle-popover" circle-popover-title="...Back-End JavaScript Techs. & DevTools" circle-popover-icon="#nodejs"></div>
+        <div layout="column" layout-align="center center" circle-popover class="circle-popover md-dark-theme" circle-popover-title="...Back-End JavaScript Techs. & DevTools" circle-popover-icon="nodejs" circle-popover-data="data/back.json"></div>
 
-        <div layout="row" layout-align="center center" circle-popover class="circle-popover" circle-popover-title="...other Technologies occasionally" circle-popover-icon="#"></div>
-
-        <!-- <h3 class="skills__subtitle subtitle">...Front-End JavaScript Technologies</h3> -->
-
-        <!--<div layout="column" class="skills__container">
-
-            <div ng-repeat="(skill_key,skills_group) in skills.front" layout-sm="column" layout-gt-sm="row" layout-align="center center" class="skills__content {{skill_key}}" >
-
-                <div ng-repeat="skill in skills_group" flex-sm="60" flex-gt-sm="{{ 100 / skills_group.length }}" class="md-icon__container" title="{{skill.name}}">
-
-                    <svg ng-if="skill.svg" class="md-icon" role="img" title="{{skill.name}}">
-                        <use xlink:href="{{ '#' + skill.icon }}"/>
-                    </svg>
-                    <img ng-if="!skill.svg" ng-src="{{'images/tools_icons/' + skill.icon +'.png'}}" class="md-icon" alt="{{skill.name}}" />
-
-                </div>
-
-            </div>
-
-        </div> -->
-
-<!--         <h3 class="skills__subtitle subtitle">...Back-End JavaScript Technologies & DevTools</h3> -->
-
-<!--         <div layout="column" class="skills__container">
-
-            <div ng-repeat="(skill_key,skills_group) in skills.back" layout-sm="column" layout-gt-sm="row" layout-align="center center" class="skills__content" >
-
-                <div ng-repeat="skill in skills_group" flex-sm="60" flex-gt-sm="{{ 100 / skills_group.length }}" class="md-icon__container" title="{{ skill.name }}">
-
-                    <md-icon-svg ng-if="skill.svg" icon-sprite="{{ '#' + skill.icon }}" class="md-icon__container" title="{{ skill.name }}"></md-icon-svg>
-                    <img ng-if="!skill.svg" ng-src="{{ 'images/tools_icons/' + skill.icon +'.png'}}" class="md-icon" alt="{{ skill.name }}" />
-
-                </div>
-            </div>
-        </div>
-        -->
-<!--
-        <h3 class="skills__subtitle subtitle">...other Technologies occasionally</h3>
-
-        <div layout="column" class="skills__container">
-
-            <div ng-repeat="(skill_key,skills_group) in skills.others" layout-sm="column" layout-gt-sm="row" layout-align="center center" class="skills__content" >
-
-                <div ng-repeat="skill in skills_group" flex-sm="60" flex-gt-sm="{{ 100 / skills_group.length }}" class="md-icon__container" title="{{ skill.name }}">
-
-                    <md-icon-svg ng-if="skill.svg" icon-sprite="{{ '#' + skill.icon }}" class="md-icon__container" title="{{ skill.name }}"></md-icon-svg>
-                    <img ng-if="!skill.svg" ng-src="{{ 'images/tools_icons/' + skill.icon +'.png'}}" class="md-icon" alt="{{ skill.name }}" />
-
-                </div>
-            </div>
-
-        </div> -->
+        <div layout="column" layout-align="center center" circle-popover class="circle-popover md-dark-theme" circle-popover-title="...other Technologies occasionally" circle-popover-icon="wordpress" circle-popover-data="data/others.json"></div>
 
     </md-content>
 
 
-    <md-content id="projects" layout-fill layout="column" layout-align="center center " class="content__box skills md-dark-theme" >
+    <md-content id="projects" layout-fill layout="column" layout-align="center center" class="content__box skills md-dark-theme" >
 
         <h2 class="projects__title title centered">I'm working on...</h2>
 

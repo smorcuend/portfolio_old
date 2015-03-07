@@ -13,29 +13,29 @@ angular.module('portfolioApp')
             templateUrl: 'views/social-bar.html',
             restrict: 'E',
             scope: {},
-            controller: function($scope, $attrs) {
+            controller: ['$scope', '$attrs', function($scope, $attrs) {
 
                 $scope.layoutAlign = $attrs.layoutalign;
 
                 $scope.socialiconbar = [{
                     name: 'GitHub',
-                    iconid: '#github',
+                    iconid: 'github',
                     href: 'https://github.com/smorcuend'
                 }, {
                     name: 'Twitter',
-                    iconid: '#twitter',
+                    iconid: 'twitter',
                     href: 'https://twitter.com/smorcuend'
                 }, {
                     name: 'Bitbucket',
-                    iconid: '#bitbucket',
+                    iconid: 'bitbucket',
                     href: 'https://bitbucket.org/smorcuend'
                 }, {
                     name: 'Linkedin',
-                    iconid: '#linkedin',
+                    iconid: 'linkedin',
                     href: 'https://es.linkedin.com/pub/sergio-morcuende/64/282/6b6'
                 }];
 
-            },
+            }],
             link: function postLink() {
                 console.log('social-bar directive');
             }

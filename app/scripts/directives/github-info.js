@@ -13,7 +13,7 @@ angular.module('portfolioApp')
             templateUrl: 'views/github-info.html',
             restrict: 'E',
             scope: {},
-            controller: function($scope, $http, $attrs, $localStorage) {
+            controller: ['$scope', '$http', '$attrs', '$localStorage', function($scope, $http, $attrs, $localStorage) {
 
                 $scope.userNotFound = false;
                 $scope.loaded = false;
@@ -65,7 +65,7 @@ angular.module('portfolioApp')
 
                 }
 
-            },
+            }],
             link: function postLink() {
                 console.log('github-info directive');
             }

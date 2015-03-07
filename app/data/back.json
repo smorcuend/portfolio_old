@@ -1,0 +1,53 @@
+[{
+    "name": "Ubuntu Gnome",
+    "svg": false,
+    "icon": "ubuntu"
+}, {
+    "name": "Sublime Text",
+    "svg": true,
+    "icon": "sublime"
+}, {
+    "name": "Git",
+    "svg": false,
+    "icon": "git"
+}, {
+    "name": "npm",
+    "svg": true,
+    "icon": "npm"
+}, {
+    "name": "Grunt",
+    "svg": true,
+    "icon": "grunt"
+}, {
+    "name": "Yeoman",
+    "svg": false,
+    "icon": "yeoman"
+}, {
+    "name": "Bower",
+    "svg": false,
+    "icon": "bower"
+}, {
+    "name": "Handlebars",
+    "svg": true,
+    "icon": "handlebars"
+}, {
+    "name": "Jade",
+    "svg": false,
+    "icon": "jade"
+}, {
+    "name": "Sass",
+    "svg": false,
+    "icon": "sass"
+}, {
+    "name": "Compass",
+    "svg": false,
+    "icon": "compass"
+}, {
+    "name": "Chrome DevTools",
+    "svg": false,
+    "icon": "chrome"
+}, {
+    "name": "Jenkins",
+    "svg": false,
+    "icon": "jenkins"
+}]

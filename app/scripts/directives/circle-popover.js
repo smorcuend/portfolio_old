@@ -12,37 +12,52 @@ angular.module('portfolioApp')
             name: 'circle-popover',
             templateUrl: 'views/circle-popover.html',
             restrict: 'A',
-            transclude: true,
             scope: {},
             link: {
                 pre: function preLink($scope, $element, $attrs) {
+
                     $scope.title = '';
                     $scope.cover = '';
-                    $scope.numElems = 0;
-                    $scope.angleElem = 0;
 
-                    function _populate() {
+                    $scope._populate = function(data) {
+
+                        if (!data && !$scope.data) {
+                            return false;
+                        }
+
                         var elementsCoor = [],
-                            ItemPos = function(x, y) {
+                            ItemPos = function(id, title, svg, x, y) {
                                 return {
-                                    x: x,
-                                    y: y
+                                    id: id,
+                                    title: title,
+                                    svg: svg,
+                                    x: x / 16,
+                                    y: y / 16
                                 };
                             },
-                            offsetX = $element[0].clientWidth / 2,
-                            offsetY = $element[0].clientHeight / 2;
+                            offsetX = ($element[0].clientWidth / 2),
+                            offsetY = offsetX,
+                            numElems = 0;
 
-                        var listAlias = $scope.$parent.skills.front;
-                        for (var i = 0; i < listAlias.length; i++) {
-                            var item = new ItemPos(
-                                Math.cos(i * $scope.angleElem) - offsetY,
-                                Math.sin(i * $scope.angleElem) - offsetX
-                            );
+                        numElems = (Math.PI * 2) / data.length;
+
+                        for (var i = 0; i < data.length; i++) {
+
+                            var x = (Math.sin((2 * Math.PI * i) / numElems) * offsetX); // + offsetX;
+                            var y = (Math.cos((2 * Math.PI * i) / numElems) * offsetY) + offsetY / 3;
+                            var item = new ItemPos(data[i].icon, data[i].name, data[i].svg, x, y);
+
                             elementsCoor.push(item);
-                        }
-                        console.log(elementsCoor);
 
-                    }
+                        }
+
+                        return elementsCoor;
+
+                    };
+
+                    //Fix origin position over .circle-popover__content
+                    $element.children()[0].style.top = '-3rem';
+                    $element.children()[0].style.left = '-3rem';
 
                     if ($attrs.circlePopoverTitle) {
                         $scope.title = $attrs.circlePopoverTitle;
@@ -51,31 +66,30 @@ angular.module('portfolioApp')
                         $scope.cover = $attrs.circlePopoverIcon;
                     }
 
-                    $scope.angleElem = $scope.$parent.skills.front.length / 360;
-
                     if ($attrs.circlePopoverData) {
 
                         $http.get($attrs.circlePopoverData).success(function(data) {
                             $scope.data = data;
+                            $scope.elements = $scope._populate(data);
                         }).error(function(data) {
-                            console.log('http error');
+                            console.log('http error', data);
                         });
-                        $scope.data = $attrs.circlePopoverData;
-
-                        _populate();
 
                     }
 
                 },
 
-                post: function postLink($scope, $element, $attrs) {
+                post: function postLink($scope, $element) {
                     function _resize() {
-                        $element.css('height', $element[0].clientWidth + 'px');
+                        $element.css('height', Math.round($element[0].clientWidth / 16) + 'rem');
+                        $scope.elements = $scope._populate($scope.data);
+
                     }
-                    angular.element(window).bind('resize', _resize);
+                    angular.element(window).on('resize', _resize);
                     _resize();
                 }
             }
 
         };
+
     }]);

@@ -1,23 +1,24 @@
 /* Space out content a bit */
 
-/* Reset */
 body,html{
     background-color: #3d3e41;
     background: linear-gradient(#3d3e41,#2e2f31);
     font-family: 'Montserrat Alternates', Verdana ,sans-serif;
 }
-a[href]{
-    color:#B2FF59;
-}
-a:visited,a:link{
-    text-decoration: none;
-}
-a[href]:hover,a[href]:focus{
-    color:#76FF03;
-    text-decoration: underline;
-}
 
 /* Common styles */
+.link{
+    color:#64DD17;
+    text-decoration: none;
+}
+.link:hover{
+    color:#76FF00;
+}
+.link:hover .md-icon,.link:focus .md-icon{
+    color:#76FF03;
+    fill:currentColor;
+}
+
 .bold{
     font-weight: bolder;
 }
@@ -90,6 +91,7 @@ md-sidenav.md-sidenav-left{
 }
 .md-icon{
     width:100%;
+    height: 100%;
 }
 
 
@@ -141,10 +143,6 @@ md-sidenav.md-sidenav-left{
     background-color: transparent;
 }
 
-.socialicons__item a:hover{
-    color:transparent;
-}
-
 .socialicons__item .md-icon,
 .toolbar .md-toolbar-tools .nav .md-icon{
     height: 1.9em;
@@ -154,7 +152,7 @@ md-sidenav.md-sidenav-left{
 }
 .socialicons__item .md-icon:hover,
 .toolbar .md-toolbar-tools .nav .md-icon:hover{
-    color:#212121;
+    /*color:#212121;*/
 }
 
 
@@ -174,7 +172,8 @@ md-sidenav.md-sidenav-left{
 }
 .cover{
     height:500px;
-    background: #aaa url('/images/cover2.JPG') no-repeat center center;
+    overflow: hidden;
+    background: #aaa url('/images/cover2.jpg') no-repeat center center;
     background-size:cover;
     transition: height 0.7s, filter 1.2s;
 }
@@ -208,6 +207,8 @@ md-sidenav.md-sidenav-left{
 .cover__content .md-icon{
     height: 3em;
     width: 3em;
+    color:#C5E1A5;
+    fill:currentColor;
 }
 .cover__more{
     font-size:1em;
@@ -227,22 +228,6 @@ md-sidenav.md-sidenav-left{
 
 
 /* skills styles */
-
-.circle-popover{
-    /*height:480px;*/
-    width:inherit;
-    max-width:30em;
-    border-radius:50%;
-    overflow:hidden;
-    margin: 2em auto;
-    background-color: #aaa;
-    transition: all 0.3s ease-out;
-    opacity:0.8;
-}
-.circle-popover:hover, .circle-popover:focus{
-    opacity:1;
-    transform: scale(1.05);
-}
 
 .skills__container{
     margin:0 auto;
@@ -308,3 +293,48 @@ md-sidenav.md-sidenav-left{
 .container__footer .footer__item{
     padding: 0.2em 0;
 }
+
+.circle-popover{
+    width:inherit;
+    max-width:30em;
+    border-radius:50%;
+    margin: 2em auto;
+    background-color: #aaa;
+    transition: all 0.3s ease-out;
+    opacity:0.8;
+}
+.circle-popover:hover, .circle-popover:focus{
+    opacity:1;
+    transform: scale(1.05);
+}
+
+.circle-popover__content{
+    opacity:0;
+    z-index:100;
+    position:relative;
+    top:0;left:0;
+    transition: opacity 0.5s;
+}
+.circle-popover:hover .circle-popover__content, .circle-popover:focus .circle-popover__content{
+    opacity:1;
+}
+
+.circle-popover__header{
+    z-index:50;
+}
+
+.circle-popover__title{
+    margin: 0.5em;
+    text-align: center;
+}
+
+.circle-popover__item{
+    margin:0 auto;
+    border-radius:50%;
+    padding:0.7rem;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    background-color: rgba(255,255,255,0.3);
+}
+

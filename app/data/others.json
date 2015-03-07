@@ -1,0 +1,33 @@
+[{
+    "name": "Mean.io",
+    "svg": false,
+    "icon": "mean"
+}, {
+    "name": "Wordpress",
+    "svg": true,
+    "icon": "wordpress"
+}, {
+    "name": "CakePHP",
+    "svg": false,
+    "icon": "cakephp"
+}, {
+    "name": "MariaDB",
+    "svg": false,
+    "icon": "mariadb"
+}, {
+    "name": "nginx",
+    "svg": false,
+    "icon": "nginx"
+}, {
+    "name": "debian",
+    "svg": false,
+    "icon": "debian"
+}, {
+    "name": "raspberry",
+    "svg": false,
+    "icon": "raspberry"
+}, {
+    "name": "arduino",
+    "svg": false,
+    "icon": "arduino"
+}]

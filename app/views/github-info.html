@@ -3,7 +3,7 @@
 <div ng-show="itemsFound" >
     <md-card ng-repeat="item in items | filter:{language:langFilter}" ng-hide="item.fork && forkFilter" class="projects__item">
         <h4 class="projects__item__title">
-            <a class="projects__item__link" ng-href="{{item.html_url}}" target="_blank">{{item.name}}</a>
+            <a class="projects__item__link link" ng-href="{{item.html_url}}" target="_blank">{{item.name}}</a>
         </h4>
         <p class="projects__item__description description">{{item.description}}</p>
     </md-card>
