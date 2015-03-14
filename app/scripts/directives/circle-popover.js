@@ -7,11 +7,11 @@
  * # circlePopover
  */
 angular.module('portfolioApp')
-    .directive('circlePopover', ['$http', function($http) {
+    .directive('circlePopover', ['resize', '$http', function(resize, $http) {
         return {
             name: 'circle-popover',
             templateUrl: 'views/circle-popover.html',
-            restrict: 'A',
+            restrict: 'E',
             scope: {},
             link: {
                 pre: function preLink($scope, $element, $attrs) {
@@ -19,45 +19,57 @@ angular.module('portfolioApp')
                     $scope.title = '';
                     $scope.cover = '';
 
-                    $scope._populate = function(data) {
+                    var ChildItem = function(id, title, url, svg, x, y) {
+                        return {
+                            id: id,
+                            title: title,
+                            url: url,
+                            svg: svg,
+                            x: x / 16,
+                            y: y / 16,
+                            w: $attrs.circleChildSize,
+                            h: $attrs.circleChildSize
+                        };
+                    };
 
-                        if (!data && !$scope.data) {
+                    $scope._populate = function() {
+
+                        if (!$scope.data || $scope.data.length === 0) {
                             return false;
                         }
 
-                        var elementsCoor = [],
-                            ItemPos = function(id, title, svg, x, y) {
-                                return {
-                                    id: id,
-                                    title: title,
-                                    svg: svg,
-                                    x: x / 16,
-                                    y: y / 16
-                                };
-                            },
-                            offsetX = ($element[0].clientWidth / 2),
+                        var offsetX = ($element[0].getBoundingClientRect().width / 2) * ($attrs.spacing || 0),
                             offsetY = offsetX,
-                            numElems = 0;
+                            numElems = $scope.data.length,
+                            data = $scope.data;
 
-                        numElems = (Math.PI * 2) / data.length;
+                        var elements = [];
 
-                        for (var i = 0; i < data.length; i++) {
+                        for (var i = 0; i < numElems; i++) {
 
-                            var x = (Math.sin((2 * Math.PI * i) / numElems) * offsetX); // + offsetX;
-                            var y = (Math.cos((2 * Math.PI * i) / numElems) * offsetY) + offsetY / 3;
-                            var item = new ItemPos(data[i].icon, data[i].name, data[i].svg, x, y);
+                            var x = (Math.sin((2 * Math.PI * i) / numElems) * offsetX);
+                            var y = (Math.cos((2 * Math.PI * i) / numElems) * offsetY);
 
-                            elementsCoor.push(item);
+                            elements.push(new ChildItem(data[i].icon, data[i].name, data[i].url, data[i].svg, x, y));
 
                         }
 
-                        return elementsCoor;
+                        if ($scope.elements) {
+                            $scope.elements.splice(0, numElems);
+                            if ($scope.$$phase) {
+                                $scope.$apply();
+                            }
+                        }
+                        $scope.elements = elements;
 
                     };
 
                     //Fix origin position over .circle-popover__content
-                    $element.children()[0].style.top = '-3rem';
-                    $element.children()[0].style.left = '-3rem';
+                    var elementContent = $element[0].firstChild; //circle-popover__content
+
+                    //@TODO Calculate relative coords dinamicly
+                    elementContent.style.top = 1 + $attrs.circleChildSize / 2 + 'em';
+                    elementContent.style.left = -4 + $attrs.circleChildSize / 2 + 'em';
 
                     if ($attrs.circlePopoverTitle) {
                         $scope.title = $attrs.circlePopoverTitle;
@@ -70,23 +82,29 @@ angular.module('portfolioApp')
 
                         $http.get($attrs.circlePopoverData).success(function(data) {
                             $scope.data = data;
-                            $scope.elements = $scope._populate(data);
+                            $scope._populate();
                         }).error(function(data) {
                             console.log('http error', data);
                         });
 
+                    } else {
+                        console.log('Error on loading data');
                     }
 
                 },
 
                 post: function postLink($scope, $element) {
                     function _resize() {
-                        $element.css('height', Math.round($element[0].clientWidth / 16) + 'rem');
-                        $scope.elements = $scope._populate($scope.data);
-
+                        $element.css('height', $element[0].clientWidth / 16 + 'rem');
+                        $scope._populate();
                     }
-                    angular.element(window).on('resize', _resize);
+
+                    $scope.$on('resize', function() {
+                        _resize();
+                    });
+
                     _resize();
+
                 }
             }
 

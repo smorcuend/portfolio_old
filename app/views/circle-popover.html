@@ -1,5 +1,7 @@
 <div hide-sm class="circle-popover__content">
-       <md-icon-svg ng-repeat="elem in elements" icon-sprite="{{elem.id}}" class="md-icon__container circle-popover__item" style="top:{{elem.y}}rem;left:{{elem.x}}rem" fallback-png="{{!elem.svg}}"></md-icon-svg>
+    <a href="{{elem.url}}" target="_blank" class="circle-popover__item" ng-repeat="elem in elements" style="top:{{elem.y}}em;left:{{elem.x}}em;width:{{elem.w}}em;height:{{elem.h}}em" title="{{elem.title}}">
+        <md-icon-svg icon-sprite="{{elem.id}}" class="md-icon__container" fallback-png="{{!elem.svg}}"></md-icon-svg>
+    </a>
 </div>
 
 <div class="circle-popover__header">

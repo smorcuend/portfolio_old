@@ -1,33 +1,66 @@
 [{
     "name": "Mean.io",
     "svg": false,
-    "icon": "mean"
+    "icon": "mean",
+    "url": "http://mean.io/"
 }, {
     "name": "Wordpress",
     "svg": true,
-    "icon": "wordpress"
+    "icon": "wordpress",
+    "url": "http://wordpress.org"
+}, {
+    "name": "Python",
+    "svg": false,
+    "icon": "python",
+    "url": "https://www.python.org/"
+}, {
+    "name": "Java",
+    "svg": false,
+    "icon": "java",
+    "url": "http://docs.oracle.com/javase/7/docs/api/"
+}, {
+    "name": "mongoDB",
+    "svg": false,
+    "icon": "mongodb",
+    "url": "www.mongodb.org/"
+}, {
+    "name": "android",
+    "svg": false,
+    "icon": "android",
+    "url": "https://www.android.com/"
+}, {
+    "name": "mdn",
+    "svg": false,
+    "icon": "mdn",
+    "url": "https://developer.mozilla.org/"
 }, {
     "name": "CakePHP",
     "svg": false,
-    "icon": "cakephp"
+    "icon": "cakephp",
+    "url": "http://cakephp.org"
 }, {
     "name": "MariaDB",
     "svg": false,
-    "icon": "mariadb"
+    "icon": "mariadb",
+    "url": "https://mariadb.org/"
 }, {
     "name": "nginx",
     "svg": false,
-    "icon": "nginx"
+    "icon": "nginx",
+    "url": "http://nginx.org"
 }, {
     "name": "debian",
     "svg": false,
-    "icon": "debian"
+    "icon": "debian",
+    "url": "http://debian.org"
 }, {
-    "name": "raspberry",
+    "name": "Raspberry Pi",
     "svg": false,
-    "icon": "raspberry"
+    "icon": "raspberrypi",
+    "url": "http://raspberrypi.org"
 }, {
     "name": "arduino",
     "svg": false,
-    "icon": "arduino"
+    "icon": "arduino",
+    "url": "http://arduino.cc"
 }]

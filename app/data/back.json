@@ -1,53 +1,66 @@
 [{
     "name": "Ubuntu Gnome",
     "svg": false,
-    "icon": "ubuntu"
+    "icon": "ubuntu",
+    "url": "http://ubuntugnome.org"
 }, {
     "name": "Sublime Text",
     "svg": true,
-    "icon": "sublime"
+    "icon": "sublime",
+    "url": "http://sublimetext.com"
 }, {
     "name": "Git",
     "svg": false,
-    "icon": "git"
+    "icon": "git",
+    "url": "http://git-scm.com"
 }, {
     "name": "npm",
     "svg": true,
-    "icon": "npm"
+    "icon": "npm",
+    "url": "http://npmjs.com"
 }, {
     "name": "Grunt",
     "svg": true,
-    "icon": "grunt"
+    "icon": "grunt",
+    "url": "http://gruntjs.com"
 }, {
     "name": "Yeoman",
     "svg": false,
-    "icon": "yeoman"
+    "icon": "yeoman",
+    "url": "http://yeoman.io"
 }, {
     "name": "Bower",
     "svg": false,
-    "icon": "bower"
+    "icon": "bower",
+    "url": "http://bower.io"
 }, {
     "name": "Handlebars",
     "svg": true,
-    "icon": "handlebars"
+    "icon": "handlebars",
+    "url": "http://handlebarsjs.com/"
 }, {
     "name": "Jade",
     "svg": false,
-    "icon": "jade"
+    "icon": "jade",
+    "url": "http://jade-lang.com/"
 }, {
     "name": "Sass",
     "svg": false,
-    "icon": "sass"
+    "icon": "sass",
+    "url": "sass-lang.com"
 }, {
     "name": "Compass",
     "svg": false,
-    "icon": "compass"
+    "icon": "compass",
+    "url": "http://compass-style.org/"
 }, {
     "name": "Chrome DevTools",
     "svg": false,
-    "icon": "chrome"
+    "icon": "chrome",
+    "url": "https://developer.chrome.com/devtools"
 }, {
     "name": "Jenkins",
     "svg": false,
-    "icon": "jenkins"
+    "icon": "jenkins",
+    "url": "http://jenkins-ci.org/"
 }]

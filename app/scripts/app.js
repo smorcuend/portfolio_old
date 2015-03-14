@@ -18,8 +18,10 @@
         'ngTouch',
         'ngMaterial',
         'ngStorage',
-        'duScroll',
-        'angular-google-analytics'
+        'angulartics',
+        'angulartics.google.analytics',
+        'ngResize',
+        'duScroll'
     ]);
 
 })();

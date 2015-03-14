@@ -32,7 +32,7 @@ angular.module('portfolioApp')
                 }, {
                     name: 'Linkedin',
                     iconid: 'linkedin',
-                    href: 'https://es.linkedin.com/pub/sergio-morcuende/64/282/6b6'
+                    href: 'http://es.linkedin.com/in/smorcuend'
                 }];
 
             }],

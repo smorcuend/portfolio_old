@@ -163,7 +163,19 @@
             wiredep: {
                 app: {
                     src: ['<%= yeoman.app %>/index.html'],
-                    ignorePath: /\.\.\//
+                    ignorePath: /\.\.\//,
+                    overrides: {
+                        angulartics: {
+                            'main': [
+                                'src/angulartics.js',
+                                'src/angulartics-ga.js'
+                            ],
+                            'dependencies': {
+                                'angular': '>= 1.1.5',
+                                'SHA-1': '*'
+                            }
+                        }
+                    }
                 }
             },
 
@@ -256,8 +268,17 @@
                     files: [{
                         expand: true,
                         cwd: '<%= yeoman.app %>/images',
-                        src: '{,*/}*.{png,jpg,jpeg,gif}',
+                        // src: ['{,*/}*.{!png,jpg,jpeg,gif}', '.tmp/images/sprite.png'],
+                        src: ['{,*/}*.{png,jpg,jpeg,gif}', '.tmp/images/sprite.png'],
                         dest: '<%= yeoman.dist %>/images'
+                    }]
+                },
+                dev: {
+                    files: [{
+                        expand: true,
+                        cwd: '<%= yeoman.app %>/images',
+                        src: ['{,*/}*.{png,jpg,jpeg,gif}'],
+                        dest: '.tmp/images'
                     }]
                 }
             },
@@ -283,6 +304,21 @@
                     src: '<%= yeoman.app %>/images/{,*/}*.svg',
                     dest: '<%= yeoman.dist %>/images/sprite.svg',
                 },
+            },
+
+            sprite: {
+                dev: {
+                    src: '<%= yeoman.app %>/images/{,*/}*.png',
+                    dest: '.tmp/images/sprite.png',
+                    destCss: '.tmp/styles/sprite.css',
+                    // cssTemplate: '<%= yeoman.app %>/styles/css.template.mustache'
+                },
+                dist: {
+                    src: '<%= yeoman.app %>/images/{,*/}*.png',
+                    dest: '<%= yeoman.dist %>/images/sprite.png',
+                    destCss: '<%= yeoman.dist %>/styles/sprite.css',
+                    // cssTemplate: '<%= yeoman.app %>/styles/css.template.mustache'
+                }
             },
 
             htmlmin: {
@@ -344,7 +380,7 @@
                         expand: true,
                         cwd: '.tmp/images',
                         dest: '<%= yeoman.dist %>/images',
-                        src: ['generated/*', 'sprite.svg']
+                        src: ['generated/*', 'sprite.svg', '{,*/}*.png']
                     }]
                 },
                 styles: {
@@ -359,12 +395,15 @@
             concurrent: {
                 server: [
                     'copy:styles',
+                    'imagemin:dev',
+                    // 'sprite:dev',
                     'svgstore:dev'
                 ],
                 test: [
                     'copy:styles'
                 ],
                 dist: [
+                    // 'sprite:dist',
                     'copy:styles',
                     'imagemin:dist',
                     'svgstore:dist'
@@ -416,7 +455,7 @@
             'uglify',
             'cdnify',
             'cssmin',
-            'filerev',
+            // 'filerev',
             // 'filerev_replace',
             'usemin',
             'htmlmin'

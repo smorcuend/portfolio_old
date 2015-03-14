@@ -1,53 +1,66 @@
 [{
     "name": "Backbone",
     "svg": true,
-    "icon": "backbone"
+    "icon": "backbone",
+    "url": "http://backbonejs.org/"
 }, {
     "name": "Marionette",
     "svg": true,
-    "icon": "marionette"
+    "icon": "marionette",
+    "url": "http://marionettejs.com/"
 }, {
     "name": "AngularJS",
     "svg": true,
-    "icon": "angularjs"
+    "icon": "angularjs",
+    "url": "http://angularjs.org/"
 }, {
     "name": "HydraJS",
     "svg": false,
-    "icon": "hydrajs"
+    "icon": "hydrajs",
+    "url": "http://tcorral.github.io/Hydra.js/"
 }, {
     "name": "coreJS",
     "svg": false,
-    "icon": "corejs"
+    "icon": "corejs",
+    "url": "http://corejs.docs.bqws.io/"
 }, {
     "name": "kiUI",
     "svg": true,
-    "icon": "kiui"
+    "icon": "kiui",
+    "url": "https://github.com/bq/kiui"
 }, {
     "name": "RequireJS",
     "svg": false,
-    "icon": "requirejs"
+    "icon": "requirejs",
+    "url": "http://requirejs.org/"
 }, {
     "name": "Web Components",
     "svg": false,
-    "icon": "webcomponents"
+    "icon": "webcomponents",
+    "url": "http://webcomponents.org/"
 }, {
     "name": "Polymer project",
     "svg": true,
-    "icon": "polymer"
+    "icon": "polymer",
+    "url": "http://polymer-project.org/"
 }, {
     "name": "jQuery",
     "svg": true,
-    "icon": "jquery"
+    "icon": "jquery",
+    "url": "jquery.com/"
 }, {
     "name": "SVG",
     "svg": true,
-    "icon": "svg"
+    "icon": "svg",
+    "url": "https://developer.mozilla.org/en/docs/Web/SVG"
 }, {
     "name": "Bootstrap",
     "svg": false,
-    "icon": "bootstrap"
+    "icon": "bootstrap",
+    "url": "http://getbootstrap.com/"
 }, {
     "name": "Less",
     "svg": false,
-    "icon": "less"
+    "icon": "less",
+    "url": "http://lesscss.org/"
 }]

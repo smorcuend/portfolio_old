@@ -8,10 +8,10 @@
     </md-content>
 </md-sidenav>
 
-<md-content layout="column" layout-align="center center" class="content" id="container" >
+<md-content layout="column" layout-align="center center" class="content" id="container">
 
     <md-content id="cover" layout="column" layout-fill layout-align="center center" class="cover">
-        <div class="overlay" ng-class="{visible:isOnTop}">
+        <div class="overlay">
             <p class="cover__more">...scroll down to learn more</p>
         </div>
         <div class="cover__content" ng-class="{visible:isOnTop}">
@@ -53,26 +53,24 @@
 
         <h2 class="skills__title title centered">I'm working with...</h2>
 
-        <div layout="column" layout-align="center center" circle-popover class="circle-popover md-dark-theme" circle-popover-title="...Front-End JavaScript Techs." circle-popover-icon="html5" circle-popover-data="data/front.json"></div>
+        <circle-popover layout="column" layout-align="center center" class="circle-popover md-dark-theme" circle-popover-title="...Front-End Technologies" circle-popover-icon="html5" spacing="0.75" circle-child-size="4" circle-popover-data="data/front.json" ng-click></circle-popover>
 
-        <div layout="column" layout-align="center center" circle-popover class="circle-popover md-dark-theme" circle-popover-title="...Back-End JavaScript Techs. & DevTools" circle-popover-icon="nodejs" circle-popover-data="data/back.json"></div>
+        <circle-popover layout="column" layout-align="center center" class="circle-popover md-dark-theme" circle-popover-title="...Back-End Technologies & DevTools" circle-popover-icon="nodejs" spacing="0.75" circle-child-size="4" circle-popover-data="data/back.json" ng-click></circle-popover>
 
-        <div layout="column" layout-align="center center" circle-popover class="circle-popover md-dark-theme" circle-popover-title="...other Technologies occasionally" circle-popover-icon="wordpress" circle-popover-data="data/others.json"></div>
+        <circle-popover layout="column" layout-align="center center" class="circle-popover md-dark-theme" circle-popover-title="...other Technologies occasionally" circle-popover-icon="wordpress" spacing="0.75" circle-child-size="4" circle-popover-data="data/others.json" ng-click></circle-popover>
 
     </md-content>
 
 
-    <md-content id="projects" layout-fill layout="column" layout-align="center center" class="content__box skills md-dark-theme" >
+    <md-content id="projects" layout-fill layout="column" layout-align="center center" class="content__box skills md-dark-theme">
 
         <h2 class="projects__title title centered">I'm working on...</h2>
 
-
-        <div layout-sm="column" layout-gt-sm="row" class="projects__content" >
+        <div layout-sm="column" layout-gt-sm="row" class="projects__content">
 
             <div layout="column" flex-sm flex-gt-sm="50" layout-fill layout-align="start center">
 
                 <h3 class="projects__title subtitle centered">...personal projects</h3>
-
                 <github-info id="personal_repositories" user="smorcuend" type="repositories" show-fork="false"></github-info>
 
             </div>
@@ -80,7 +78,6 @@
             <div layout="column" flex-sm flex-gt-sm="50" layout-fill layout-align="start center">
 
                 <h3 class="projects__title subtitle centered">...open-source projects</h3>
-
                 <github-info id="contribution_repositories" user="bq" type="repositories" language="JavaScript" show-fork="false"></github-info>
 
             </div>
