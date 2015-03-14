@@ -12,7 +12,11 @@ angular.module('portfolioApp')
         return {
             name: 'main-footer',
             templateUrl: 'views/main-footer.html',
-            restrict: 'E'
+            restrict: 'E',
+            link: function postLink($scope) {
+                console.log('mainFooter directive');
+                $scope.ui.$footer = angular.element(document.querySelector('.container__footer'));
+            }
         };
     });
 // })();

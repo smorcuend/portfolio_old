@@ -215,7 +215,7 @@ md-sidenav.md-sidenav-left {
 .cover {
     height: 500px;
     overflow: hidden;
-    background: #aaa;
+    background: #3d3e41 !important;
     /*background-size: cover;*/
     /*transition: height 0.7s, -webkit-filter 1.2s, height 0.7s, filter 1.2s;*/
 }

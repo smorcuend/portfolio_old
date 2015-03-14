@@ -81,11 +81,13 @@ angular.module('portfolioApp')
                     $scope.ui.$coverContent.addClass('visible');
                     $scope.ui.$overlay.removeClass('blur');
                     $scope.ui.$toolbar.removeClass('visible');
+                    $scope.ui.$overlay.css('height', window.innerHeight + 'px');
                 } else {
                     // $scope.ui.$overlay.removeClass('visible');
                     $scope.ui.$coverContent.removeClass('visible');
                     $scope.ui.$overlay.addClass('blur');
                     $scope.ui.$toolbar.addClass('visible');
+                    $scope.ui.$overlay.css('height', window.innerHeight - $scope.ui.$footer[0].clientHeight + 'px');
                 }
             });
 

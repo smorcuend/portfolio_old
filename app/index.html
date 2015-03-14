@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js">
+
 <head>
     <meta charset="utf-8">
     <title>Sergio Morcuende - FrontEnd Web Engineer</title>
@@ -24,11 +25,20 @@
     <!-- <link rel="stylesheet" href="styles/sprite.css"> -->
     <!-- endbuild -->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-31122385-2', { 'cookieDomain': 'none' });
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-31122385-2', {
+        'cookieDomain': 'none'
+    });
     </script>
 </head>
 
@@ -39,7 +49,7 @@
 
     <main-toolbar layout="row" class="container__toolbar"></main-toolbar>
     <main-content layout="column" class="container__content" tabindex="-1" role="main"></main-content>
-    <main-footer layout="column" layout-align="center center" class="container__footer" flex></main-footer>
+    <main-footer layout="column" layout-align="center center" class="container__footer"></main-footer>
 
     <div ng-hide="true" ng-include="'images/sprite.svg'"></div>
 
@@ -74,5 +84,5 @@
     <script src="scripts/directives/circle-popover.js"></script>
     <!-- endbuild -->
 </body>
-</html>
 
+</html>
