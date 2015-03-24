@@ -6,10 +6,8 @@
  * @description
  * # main
  */
-// (function() {
-angular.module('portfolioApp')
-    .directive('mainContent', function() {
-
+(function() {
+    angular.module('portfolioApp').directive('mainContent', function() {
         return {
             name: 'main-content',
             restrict: 'E',
@@ -17,8 +15,8 @@ angular.module('portfolioApp')
             link: function postLink($scope) {
                 console.log('mainContent directive');
 
-                $scope.ui.$cover = angular.element(document.querySelector('.cover'));
-                $scope.ui.$overlay = angular.element(document.querySelector('.overlay'));
+                $scope.ui.$cover = angular.element(document.querySelector('#cover'));
+                $scope.ui.$coverBg = angular.element(document.querySelector('.cover__bg'));
                 $scope.ui.$coverContent = angular.element(document.querySelector('.cover__content'));
 
                 var coverResize = function() {
@@ -34,4 +32,4 @@ angular.module('portfolioApp')
 
         };
     });
-// })();
+})();

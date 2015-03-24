@@ -1,6 +1,7 @@
 /* Space out content a bit */
 
-body, html {
+body,
+html {
     background-color: #3d3e41;
     background: linear-gradient(#3d3e41, #2e2f31);
     font-family: 'Montserrat Alternates', Verdana, sans-serif;
@@ -11,31 +12,31 @@ body, html {
     color: #64DD17;
     text-decoration: none;
 }
-.link:hover {
+
+.link:hover,
+.link:focus {
     color: #76FF00;
 }
-.link:hover .md-icon, .link:focus .md-icon {
+
+.link:hover .icon,
+.link:focus .icon {
     color: #76FF03;
     fill: currentColor;
 }
-.bold {
-    font-weight: bolder;
-}
-.centered {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
+
 .visible {
     opacity: 1 !important;
 }
+
 .blur {
     /*-webkit-filter: grayscale(0.7) blur(2px);*/
     /*filter: grayscale(0.7) blur(2px);*/
 }
+
 .marked {
     color: #B2FF59;
 }
+
 .content__box {
     padding: 2em 4em;
 }
@@ -45,6 +46,7 @@ body, html {
     background-color: #3d3e41 !important;
     background: linear-gradient(#3d3e41, #2e2f31);
 }
+
 .md-light-theme {
     background-color: #7CB342;
     background: linear-gradient(#7CB342, #689F38);
@@ -52,20 +54,24 @@ body, html {
 /* theme styles components overwrite*/
 /* md-icon */
 
-.md-icon {
+md-icon-svg .icon {
     width: 100%;
     height: 100%;
 }
+
 md-content {
     font-size: 1.1em;
     color: rgba(241, 248, 233, 0.8);
 }
+
 md-toolbar {
     background-color: #8BC34A !important;
 }
+
 md-card {
     transition: box-shadow 0.2s ease;
 }
+
 md-card:hover {
     box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.6);
 }
@@ -78,6 +84,7 @@ md-backdrop.md-sidenav-backdrop {
     width: 100% !important;
     height: 100% !important;
 }
+
 md-sidenav.md-sidenav-left {
     position: fixed;
     top: 0;
@@ -97,19 +104,26 @@ md-sidenav.md-sidenav-left {
     transform: scale(0.9);
     transition: all 0.2s ease-out;
 }
-.circle-popover:hover, .circle-popover:focus {
+
+.circle-popover:hover,
+.circle-popover:focus {
     transform: scale(1);
 }
+
 .circle-popover__header {
     transition: transform 0.2s ease-out;
 }
-.circle-popover:hover .circle-popover__header, .circle-popover:focus .circle-popover__header {
+
+.circle-popover:hover .circle-popover__header,
+.circle-popover:focus .circle-popover__header {
     transform: scale(0.9);
 }
+
 .circle-popover__title {
     margin: 0.5em;
     text-align: center;
 }
+
 .circle-popover__content {
     width: 1px;
     height: 1px;
@@ -118,6 +132,7 @@ md-sidenav.md-sidenav-left {
     top: 0;
     left: 0;
 }
+
 .circle-popover__item {
     margin: 0 auto;
     border-radius: 50%;
@@ -131,7 +146,18 @@ md-sidenav.md-sidenav-left {
     transition-delay: 0.2s;
     transform: scale(0.01);
 }
-.circle-popover:hover .circle-popover__item, .circle-popover:focus .circle-popover__item {
+
+.circle-popover__item:focus {
+    box-shadow: 0px 0px 20px 2px #B2FF59;
+}
+
+.circle-popover:hover .circle-popover__item,
+.circle-popover:focus .circle-popover__item {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.circle-popover .circle-popover__item:focus {
     transform: scale(1);
     opacity: 1;
 }
@@ -143,19 +169,23 @@ md-sidenav.md-sidenav-left {
 .sidenav__content {
     margin-top: 4em;
 }
+
 .sidenav__content ul {
     margin: 0;
     padding: 0;
     text-align: center;
     list-style-type: none;
 }
+
 .sidenav__content ul li {
     padding: 0 1em;
     margin: 1em auto;
 }
+
 .sidenav__content ul li a {
     font-size: 1.5em;
 }
+
 .sidenav__content ul li a.active {
     color: #9ccc65;
 }
@@ -170,14 +200,17 @@ md-sidenav.md-sidenav-left {
     left: 0;
     transition: all 0.3s ease-out;
 }
+
 .toolbar:not(.visible) {
     top: -2em;
 }
+
 .toolbar .home__title {
     color: #33691E;
     font-weight: bolder;
 }
-.toolbar .home__slogan {
+
+.toolbar .home__subtitle {
     color: #F1F8E9;
 }
 /*Social icons directive*/
@@ -185,33 +218,24 @@ md-sidenav.md-sidenav-left {
 .socialicons__item {
     transition: color 0.2s ease-out;
 }
-.socialicons__item:hover, .socialicons__item:focus, .toolbar .md-toolbar-tools .nav:hover, .toolbar .md-toolbar-tools .nav:focus {
+
+.socialicons__item:hover,
+.socialicons__item:focus,
+.toolbar .md-toolbar-tools .nav:hover,
+.toolbar .md-toolbar-tools .nav:focus {
     background-color: transparent;
 }
-.socialicons__item .md-icon, .toolbar .md-toolbar-tools .nav .md-icon {
-    height: 1.9em;
-    width: 1.9em;
+
+.socialicons__item .icon,
+.toolbar .md-toolbar-tools .nav .icon {
+    height: 2em;
+    width: 2em;
     transition: all 0.2s ease-out;
     color: #C5E1A5;
 }
 /* ** page:content styles ** */
 /* Cover styles */
 
-.overlay {
-    z-index: 0;
-    width: 100%;
-    height: inherit;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #aaa url('/images/cover2.jpg') no-repeat center center;
-    background-size: cover;
-    transition: height 0.7s, -webkit-filter 0.8s, filter 0.8s;
-}
-.overlay:not(.blur) {
-    /*-webkit-filter: brightness(80%);*/
-    /*filter: brightness(80%);*/
-}
 .cover {
     height: 500px;
     overflow: hidden;
@@ -224,33 +248,56 @@ md-sidenav.md-sidenav-left {
     filter: grayscale(0.7) blur(2px);
 }*/
 
+.cover__bg {
+    z-index: 0;
+    width: 100%;
+    height: inherit;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #aaa url('/images/cover2.jpg') no-repeat center center;
+    background-size: cover;
+    transition: height 0.7s, -webkit-filter 0.8s, filter 0.8s;
+}
+
+.cover__bg:not(.blur) {
+    /*-webkit-filter: brightness(80%);*/
+    /*filter: brightness(80%);*/
+}
+
 .cover__content {
+    width: 100%;
     z-index: 50;
+    background-color: rgba(0, 0, 0, 0.4);
     color: #f2f2f2;
     text-align: center;
     opacity: 0;
-    transition: all 1s;
+    transition: all 0.8s;
 }
+
 .cover__content:not(.visible) {
     -webkit-transform: scale(0.5);
     transform: scale(0.5);
 }
+
 .cover__title {
-    font-size: 3.5em;
-    margin-bottom: 0.2em;
+    font-size: 2em;
     color: #F1F8E9;
 }
-.cover__slogan {
-    font-size: 1.5em;
-    margin-bottom: 0.1em;
+
+.cover__subtitle {
+    /*font-size: 1.5em;*/
+    
     color: #8BC34A;
 }
-.cover__content .md-icon {
+
+.cover__content .icon {
     height: 3em;
     width: 3em;
     color: #C5E1A5;
     fill: currentColor;
 }
+
 .cover__more {
     font-size: 1em;
     width: inherit;
@@ -272,11 +319,13 @@ md-sidenav.md-sidenav-left {
     padding: 0;
     margin: 0.5em;
 }
+
 .projects__item__title {
     background-color: #666;
     padding: 0.7em;
     margin: 0;
 }
+
 .projects__item__description {
     font-size: 0.9em;
     padding: 1em;
@@ -290,6 +339,7 @@ md-sidenav.md-sidenav-left {
     color: #555;
     background-color: rgba(18, 17, 17, 0.49);
 }
-.container__footer .footer__item {
+
+.footer__item {
     padding: 0.2em 0;
 }

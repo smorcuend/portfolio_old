@@ -6,8 +6,8 @@
  * @description
  * # circlePopover
  */
-angular.module('portfolioApp')
-    .directive('circlePopover', ['resize', '$http', function(resize, $http) {
+(function() {
+    angular.module('portfolioApp').directive('circlePopover', ['resize', '$http', function(resize, $http) {
         return {
             name: 'circle-popover',
             templateUrl: 'views/circle-popover.html',
@@ -111,3 +111,4 @@ angular.module('portfolioApp')
         };
 
     }]);
+})();

@@ -7,9 +7,8 @@
  * # MainCtrl
  * Controller of the portfolioApp
  */
-// (function() {
-angular.module('portfolioApp')
-    .controller('MainCtrl', ['$scope', '$document', '$mdSidenav',
+(function() {
+    angular.module('portfolioApp').controller('MainCtrl', ['$scope', '$document', '$mdSidenav',
 
         function($scope, $document, $mdSidenav) {
 
@@ -18,13 +17,11 @@ angular.module('portfolioApp')
 
             $scope.ui = {};
 
-            $scope.coverContent = {
-                title: 'Sergio Morcuende',
-                slogan: '"Make optimism in your developments"'
-            };
+            //Info
+            $scope.alias = 'Sergio Morcuende';
+            $scope.slogan = '"Make optimism in your developments"';
 
             /*AsideNav functions*/
-
             $scope.asidemenu = [{
                 title: 'Go to top',
                 action: 'toTheTop()',
@@ -74,20 +71,20 @@ angular.module('portfolioApp')
             };
 
             $document.on('scroll', function() {
-                if (!$scope.ui.$overlay) {
+                if (!$scope.ui.$coverBg) {
                     return false;
                 } else if ($scope.isOnTop()) {
-                    // $scope.ui.$overlay.addClass('visible');
+                    // $scope.ui.$coverBg.addClass('visible');
                     $scope.ui.$coverContent.addClass('visible');
-                    $scope.ui.$overlay.removeClass('blur');
+                    $scope.ui.$coverBg.removeClass('blur');
                     $scope.ui.$toolbar.removeClass('visible');
-                    $scope.ui.$overlay.css('height', window.innerHeight + 'px');
+                    $scope.ui.$coverBg.css('height', window.innerHeight + 'px');
                 } else {
-                    // $scope.ui.$overlay.removeClass('visible');
+                    // $scope.ui.$coverBg.removeClass('visible');
                     $scope.ui.$coverContent.removeClass('visible');
-                    $scope.ui.$overlay.addClass('blur');
+                    $scope.ui.$coverBg.addClass('blur');
                     $scope.ui.$toolbar.addClass('visible');
-                    $scope.ui.$overlay.css('height', window.innerHeight - $scope.ui.$footer[0].clientHeight + 'px');
+                    $scope.ui.$coverBg.css('height', window.innerHeight - $scope.ui.$footer[0].clientHeight + 'px');
                 }
             });
 
@@ -100,4 +97,4 @@ angular.module('portfolioApp')
         resizeProvider.initBind = true;
     }]);
 
-// })();
+})();

@@ -6,9 +6,8 @@
  * @description
  * # mainToolbar
  */
-// (function () {
-angular.module('portfolioApp')
-    .directive('mainToolbar', function() {
+(function() {
+    angular.module('portfolioApp').directive('mainToolbar', function() {
         return {
             name: 'main-toolbar',
             templateUrl: 'views/main-toolbar.html',
@@ -20,4 +19,4 @@ angular.module('portfolioApp')
             }
         };
     });
-// })();
+})();

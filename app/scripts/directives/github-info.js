@@ -6,8 +6,8 @@
  * @description
  * # githubInfo
  */
-angular.module('portfolioApp')
-    .directive('githubInfo', function() {
+(function() {
+    angular.module('portfolioApp').directive('githubInfo', function() {
         return {
             name: 'github-info',
             templateUrl: 'views/github-info.html',
@@ -71,3 +71,4 @@ angular.module('portfolioApp')
             }
         };
     });
+})();

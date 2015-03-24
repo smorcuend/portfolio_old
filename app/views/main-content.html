@@ -7,85 +7,49 @@
         </ul>
     </md-content>
 </md-sidenav>
-
 <md-content layout="column" layout-align="center center" class="content" id="container">
-
     <md-content id="cover" layout="column" layout-fill layout-align="center center" class="cover">
-        <div class="overlay">
+        <div class="cover__bg">
             <p class="cover__more">...scroll down to learn more</p>
         </div>
         <div class="cover__content" ng-class="{visible:isOnTop}">
-            <h2 class="cover__title alias">{{coverContent.title}}</h2>
-            <h3 class="cover__slogan">{{coverContent.slogan}}</h3>
-
+            <h1 class="cover__title alias">{{alias}}</h1>
+            <h2 class="cover__subtitle slogan">{{slogan}}</h2>
             <social-bar class="socialicons" layout="row" layout-align="center center"></social-bar>
-
         </div>
     </md-content>
-
-
     <md-content id="description" layout="column" class="content__box description md-dark-theme">
-
-        <h2 layout="row" class="description__title title centered">This is my personal site and my design playground</h2>
-
+        <h2 layout="row" class="description__title">This is my personal site and my design playground</h2>
         <div layout="row" layout-sm="column" layout-align="center start" layout-margin layout-padding class="description__content">
-
             <div flex-gt-sm="40" flex>
                 <p class="description">Hi!. I'm a Spanish boy born in the land of Don Quixote of La Mancha. I'm passionate about that science and technology let us live in a best global society. Nowadays, Internet and the web technologies are my work chain.</p>
-
                 <p class="description">I discover my love by Web technologies around the year 2011. In this moment, i realize the potencial as a tool for change.</p>
             </div>
-
             <div flex-gt-sm="40" flex>
-
                 <p class="description">Currently, I am Front-end Web Engineer at <a class="marked link" href="https://bq.com" target="_blank">bq</a>. It's in this great company where i am trying to explore the capabilities of future web with my beloved team.</p>
-
                 <p class="description">I try to translate some personal attributes that define me, such as, creativity, optimism, enthusiasm, into projects that i work.</p>
-
             </div>
-
         </div>
-
     </md-content>
-
-
     <md-content id="skills" layout-fill layout="column" layout-align="center center" class="content__box skills md-light-theme">
-
-        <h2 class="skills__title title centered">I'm working with...</h2>
-
+        <h2 class="skills__title">I'm working with...</h2>
         <circle-popover layout="column" layout-align="center center" class="circle-popover md-dark-theme" circle-popover-title="...Front-End Technologies" circle-popover-icon="html5" spacing="0.75" circle-child-size="4" circle-popover-data="data/front.json" ng-click></circle-popover>
-
         <circle-popover layout="column" layout-align="center center" class="circle-popover md-dark-theme" circle-popover-title="...Back-End Technologies & DevTools" circle-popover-icon="nodejs" spacing="0.75" circle-child-size="4" circle-popover-data="data/back.json" ng-click></circle-popover>
-
         <circle-popover layout="column" layout-align="center center" class="circle-popover md-dark-theme" circle-popover-title="...other Technologies occasionally" circle-popover-icon="wordpress" spacing="0.75" circle-child-size="4" circle-popover-data="data/others.json" ng-click></circle-popover>
-
     </md-content>
-
-
     <md-content id="projects" layout-fill layout="column" layout-align="center center" class="content__box skills md-dark-theme">
-
-        <h2 class="projects__title title centered">I'm working on...</h2>
-
+        <h2 class="projects__title">I'm working on...</h2>
         <div layout-sm="column" layout-gt-sm="row" class="projects__content">
-
             <div layout="column" flex-sm flex-gt-sm="50" layout-fill layout-align="start center">
-
-                <h3 class="projects__title subtitle centered">...personal projects</h3>
+                <h3 class="projects__subtitle">...personal projects</h3>
                 <github-info id="personal_repositories" user="smorcuend" type="repositories" show-fork="false"></github-info>
-
             </div>
-
             <div layout="column" flex-sm flex-gt-sm="50" layout-fill layout-align="start center">
-
-                <h3 class="projects__title subtitle centered">...open-source projects</h3>
+                <h3 class="projects__subtitle">...open-source projects</h3>
                 <github-info id="contribution_repositories" user="bq" type="repositories" language="JavaScript" show-fork="false"></github-info>
-
             </div>
-
         </div>
-
     </md-content>
-
     <!--<md-content id="activity" layout="column" layout-fill class="content__box activity md-light-theme" >
         <p flex>Twitter Activity</p>
         <p flex>Github Activity</p>
@@ -94,5 +58,4 @@
     <md-content id="cites" layout="column" layout-fill class="content__box activity md-dark-theme">
         <blockquote cite="http://en.wikipedia.org/wiki/Alan_Kay#cite_note-2">"The best way to predict the future is to invent it." Alan kay</blockquote>
     </md-content> -->
-
 </md-content>

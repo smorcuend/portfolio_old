@@ -47,7 +47,7 @@
     "name": "jQuery",
     "svg": true,
     "icon": "jquery",
-    "url": "jquery.com/"
+    "url": "http://jquery.com/"
 }, {
     "name": "SVG",
     "svg": true,

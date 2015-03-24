@@ -6,8 +6,8 @@
  * @description
  * # socialBar
  */
-angular.module('portfolioApp')
-    .directive('socialBar', function() {
+(function() {
+    angular.module('portfolioApp').directive('socialBar', function() {
         return {
             name: 'social-bar',
             templateUrl: 'views/social-bar.html',
@@ -41,3 +41,4 @@ angular.module('portfolioApp')
             }
         };
     });
+})();

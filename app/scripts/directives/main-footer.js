@@ -6,17 +6,16 @@
  * @description
  * # mainFooter
  */
-// (function () {
-angular.module('portfolioApp')
-    .directive('mainFooter', function() {
+(function() {
+    angular.module('portfolioApp').directive('mainFooter', function() {
         return {
             name: 'main-footer',
             templateUrl: 'views/main-footer.html',
             restrict: 'E',
-            link: function postLink($scope) {
+            link: function postLink($scope, $el) {
                 console.log('mainFooter directive');
-                $scope.ui.$footer = angular.element(document.querySelector('.container__footer'));
+                $scope.ui.$footer = $el;
             }
         };
     });
-// })();
+})();
